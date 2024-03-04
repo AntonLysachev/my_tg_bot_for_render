@@ -10,7 +10,7 @@ TOKEN = os.getenv('TOKEN')
 URL = os.getenv('URL')
 DEBUG_SWITCH = os.getenv('DEBUG_SWITCH')
 
-bot = telebot.TeleBot(TOKEN)
+bot = telebot.TeleBot(TOKEN, threaded=False)
 app = Flask(__name__)
 logger = telebot.logger
 logger.setLevel(logging.DEBUG)
