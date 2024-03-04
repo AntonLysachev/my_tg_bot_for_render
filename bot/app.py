@@ -45,7 +45,7 @@ if __name__ == "bot.app":
     print('GO')
     bot.remove_webhook()
     bot.set_webhook(url=URL)
-    app.run(debug=DEBUG_SWITCH)
+ 
 
 if __name__ == "__main__":
     bot.remove_webhook()
