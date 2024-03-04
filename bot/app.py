@@ -34,11 +34,15 @@ def getMessage():
     return "!", 200
 
 
-@app.route('/')
-def index():
-    bot.remove_webhook()
-    bot.set_webhook(url=URL)
-    return 'OK', 200
+# @app.route('/')
+# def index():
+#     bot.remove_webhook()
+#     bot.set_webhook(url=URL)
+#     return 'OK', 200
+
+
+print('!!!!!!!!!!')
+print(__name__)
 
 
 if __name__ == "__main__":
