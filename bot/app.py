@@ -34,19 +34,13 @@ def getMessage():
     return "!", 200
 
 
-# @app.route('/')
-# def index():
-#     bot.remove_webhook()
-#     bot.set_webhook(url=URL)
-#     return 'OK', 200
-
-
-if __name__ == "bot.app":
-    print('GO')
+@app.route('/')
+def index():
     bot.remove_webhook()
     bot.set_webhook(url=URL)
- 
+    return 'OK', 200
 
+ 
 if __name__ == "__main__":
     bot.remove_webhook()
     bot.set_webhook(url=URL)
