@@ -4,7 +4,7 @@ import telebot
 from dotenv import load_dotenv
 import logging
 from google.cloud import dialogflow_v2
-
+import json
 
 load_dotenv()
 
@@ -60,10 +60,15 @@ def index():
     bot.set_webhook(url=URL)
     return 'OK', 200
 
+
+@app.route('/test')
+def test():
+    with open ('./small-talk-wqio-87a7338a8d59.json', 'r') as file:
+        data = file.read()
+    return data
+
  
 if __name__ == "__main__":
     bot.remove_webhook()
     bot.set_webhook(url=URL)
     app.run(debug=DEBUG_SWITCH)
-
-    
