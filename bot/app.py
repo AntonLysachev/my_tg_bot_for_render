@@ -58,6 +58,8 @@ def getMessage():
 def index():
     bot.remove_webhook()
     bot.set_webhook(url=URL)
+    credentials = service_account.Credentials.from_service_account_file('/small-talk-wqio-87a7338a8d59.json')
+    scoped_credentials = credentials.with_scopes(['https://www.googleapis.com/auth/cloud-platform'])
     return 'OK', 200
 
 
