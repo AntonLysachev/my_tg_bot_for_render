@@ -58,6 +58,9 @@ def getMessage():
 def index():
     bot.remove_webhook()
     bot.set_webhook(url=URL)
+    CLIENT = json.loads(os.getenv('CLIENT'))
+    with open ('./small-talk-wqio-87a7338a8d59.json', 'w') as file:
+        json.dump(CLIENT, file)
     return 'OK', 200
 
 
@@ -67,8 +70,11 @@ def test():
         data = file.read()
     return data
  
- 
+
 if __name__ == "__main__":
     bot.remove_webhook()
     bot.set_webhook(url=URL)
+    CLIENT = json.loads(os.getenv('CLIENT'))
+    with open ('./small-talk-wqio-87a7338a8d59.json', 'w') as file:
+        json.dump(CLIENT, file)
     app.run(debug=DEBUG_SWITCH)
