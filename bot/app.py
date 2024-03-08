@@ -4,7 +4,6 @@ import telebot
 from dotenv import load_dotenv
 import logging
 from google.cloud import dialogflow_v2
-from google.oauth2 import service_account
 
 
 load_dotenv()
@@ -58,8 +57,6 @@ def getMessage():
 def index():
     bot.remove_webhook()
     bot.set_webhook(url=URL)
-    credentials = service_account.Credentials.from_service_account_file('/small-talk-wqio-87a7338a8d59.json')
-    scoped_credentials = credentials.with_scopes(['https://www.googleapis.com/auth/cloud-platform'])
     return 'OK', 200
 
 
@@ -68,6 +65,5 @@ if __name__ == "__main__":
     bot.remove_webhook()
     bot.set_webhook(url=URL)
     app.run(debug=DEBUG_SWITCH)
-    credentials = service_account.Credentials.from_service_account_file('/small-talk-wqio-87a7338a8d59.json')
-    scoped_credentials = credentials.with_scopes(['https://www.googleapis.com/auth/cloud-platform'])
+
     
