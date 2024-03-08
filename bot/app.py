@@ -59,7 +59,6 @@ def index():
     bot.set_webhook(url=URL)
     return 'OK', 200
 
-
  
 if __name__ == "__main__":
     bot.remove_webhook()
