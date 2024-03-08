@@ -14,6 +14,7 @@ DEBUG_SWITCH = os.getenv('DEBUG_SWITCH')
 PROJECT_ID = os.getenv('PROJECT_ID')
 SESSION_ID = os.getenv('SESSION_ID')
 
+
 bot = telebot.TeleBot(TOKEN, threaded=False)
 app = Flask(__name__)
 logger = telebot.logger

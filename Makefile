@@ -10,3 +10,7 @@ dev:
 
 lint:
 	poetry run flake8 bot
+
+build:
+	chmod +x ./build.sh; \
+	./build.sh
