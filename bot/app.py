@@ -60,13 +60,6 @@ def index():
     bot.set_webhook(url=URL)
     return 'OK', 200
 
-
-@app.route('/test')
-def test():
-    with open ('./small-talk-wqio-87a7338a8d59.json', 'r') as file:
-        data = file.read()
-    return data
-
  
 if __name__ == "__main__":
     bot.remove_webhook()
